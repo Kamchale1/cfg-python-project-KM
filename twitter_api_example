@@ -1,0 +1,12 @@
+import tweepy
+
+consumer_key = 'bV8YwevK5kqH3DZmY0fLPxpip'
+consumer_secret = 'h06tId91V8czwa4Zvq74nSiAw1Gsi12JsllCc9YrjjPnPP2L8R'
+access_token = '496179173-GXQsJABBXlNwMK24TSiqbvrxxz4afQ2uvW6pcpZ4'
+access_token_secret = 'ZbntpkEVfrk12XCBnLbuVWXvzbUArdJcc21Yl54HotWVg'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+twitter_api = tweepy.API(auth)
+
+print('Logged in as {}'.format(twitter_api.me().name))
